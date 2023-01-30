@@ -8,5 +8,6 @@
 
 
 size_t memalignment(const void *);
+size_t memalignment2(const void *);
 
 #endif

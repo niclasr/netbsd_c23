@@ -33,3 +33,20 @@ memalignment(const void *p)
 
     return alignment;
 }
+
+/*
+ * not sure if this one works, but my intuition says it might
+ */
+size_t
+memalignment2(void *p)
+{
+    if (p == NULL)
+        return 0;
+
+#ifdef _LP64
+    int bit = ffs64((uint64_t)p);
+#else
+    int bit = ffs32((uint32_t)p);
+#endif
+    return (size_t)__BIT(bit-1);
+}
