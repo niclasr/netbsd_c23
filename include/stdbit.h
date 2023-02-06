@@ -1,4 +1,4 @@
-#ifndef _STDBITS_H_
-#define _STDBITS_H_
+#ifndef _STDBIT_H_
+#define _STDBIT_H_
 
 #endif
