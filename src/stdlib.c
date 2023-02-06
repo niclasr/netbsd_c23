@@ -1,10 +1,27 @@
 
 #include <stddef.h>
+#include <stdlib.h>
 #include <sys/bitops.h>
 
 #include <sys/param.h>
 #include <sys/cdefs.h>
 
+void
+free_sized(void *ptr, size_t size)
+{
+  (void)size; /* unused since jemalloc does not provide the size */
+  free(ptr);
+}
+
+void
+free_aligned_sized(void *ptr, size_t alignment, size_t size)
+{
+  (void)alignment; /* unused since jemalloc does not provide the alignment */
+  (void)size;      /* unused since jemalloc does not provide the size */
+  free(ptr);
+}
+
+#if 0
 /* not implemented yet */
 size_t
 memalignment(const void *p)
@@ -33,12 +50,14 @@ memalignment(const void *p)
 
     return alignment;
 }
+#endif
 
 /*
  * not sure if this one works, but my intuition says it might
+ * tested and gives the right values for all 32-bit adresses
  */
 size_t
-memalignment2(void *p)
+memalignment(const void *p)
 {
     if (p == NULL)
         return 0;
