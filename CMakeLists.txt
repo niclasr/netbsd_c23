@@ -6,11 +6,13 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(Macros)
 
 add_library(c23
+            src/stdbit.c
             src/stddef.c
             src/stdlib.c)
 target_include_directories(c23 PUBLIC
                            ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_compile_options(c23 PUBLIC -std=c11 -Wall -Wextra)
+target_compile_options(c23 PUBLIC -std=gnu11 -Wall -Wextra)
 
 #tests
 c23_test(memalignment)
+c23_test(stdbit)
