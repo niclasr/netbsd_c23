@@ -6,6 +6,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(Macros)
 
 add_library(c23
+            src/libm/e_hypotl.c
             src/stdbit.c
             src/stddef.c
             src/stdlib.c)
@@ -16,3 +17,4 @@ target_compile_options(c23 PUBLIC -std=gnu11 -Wall -Wextra)
 #tests
 c23_test(memalignment)
 c23_test(stdbit)
+c23_test(math)

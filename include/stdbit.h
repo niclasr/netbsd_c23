@@ -73,8 +73,34 @@ int stdc_bit_widthui(unsigned int);
 int stdc_bit_widthul(unsigned long);
 int stdc_bit_widthull(unsigned long long);
 
+unsigned char      stdc_bit_flooruc(unsigned char);
+unsigned short     stdc_bit_floorus(unsigned short);
+unsigned int       stdc_bit_floorui(unsigned int);
+unsigned long      stdc_bit_floorul(unsigned long);
+unsigned long long stdc_bit_floorull(unsigned long long);
+
 __END_DECLS
 
-#define _STDBIT_GENERIC_(FUNCTION_NAME) 
+#define __STDBIT_GENERIC__(FSIM, X) _Generic((X),   \
+        unsigned char: stdc_ ## FSIM ## uc,       \
+        unsigned short: stdc_ ## FSIM ## us,      \
+        unsigned int: stdc_ ## FSIM ## ui,        \
+        unsigned long: stdc_ ## FSIM ## ul,       \
+        unsigned long long : stdc_ ## FSIM ## ull \
+        )(X)
+
+#define stdc_leading_zeros(X)       __STDBIT_GENERIC__(leading_zeros, X)
+#define stdc_leading_ones(X)        __STDBIT_GENERIC__(leading_ones, X)
+#define stdc_trailing_zeros(X)      __STDBIT_GENERIC__(trailing_zeros, X)
+#define stdc_trailing_ones(X)       __STDBIT_GENERIC__(trailing_ones, X)
+#define stdc_first_leading_zero(X)  __STDBIT_GENERIC__(first_leading_zero, X)
+#define stdc_first_leading_one(X)   __STDBIT_GENERIC__(first_leading_one, X)
+#define stdc_first_trailing_zero(X) __STDBIT_GENERIC__(first_trailing_zero, X)
+#define stdc_first_trailing_one(X)  __STDBIT_GENERIC__(first_trailing_one, X)
+#define stdc_count_zeros(X)         __STDBIT_GENERIC__(count_zeros, X)
+#define stdc_count_ones(X)          __STDBIT_GENERIC__(count_ones, X)
+#define stdc_has_single_bit(X)      __STDBIT_GENERIC__(has_single_bit, X)
+#define stdc_bit_width(X)           __STDBIT_GENERIC__(bit_width, X)
+#define stdc_bit_floor(X)           __STDBIT_GENERIC__(bit_floor, X)
 
 #endif

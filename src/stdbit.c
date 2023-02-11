@@ -374,3 +374,39 @@ stdc_bit_widthull(unsigned long long value)
 {
    return (sizeof(value) * CHAR_BIT) - stdc_leading_zerosull(value);
 }
+
+
+
+
+
+
+
+unsigned char
+stdc_bit_flooruc(unsigned char value)
+{
+   return value == 0 ? 0 : (typeof(value))__BIT(stdc_bit_widthuc(value) - 1);
+}
+
+unsigned short
+stdc_bit_floorus(unsigned short value)
+{
+   return value == 0 ? 0 : (typeof(value))__BIT(stdc_bit_widthus(value) - 1);
+}
+
+unsigned int
+stdc_bit_floorui(unsigned int value)
+{
+   return value == 0 ? 0 : (typeof(value))__BIT(stdc_bit_widthui(value) - 1);
+}
+
+unsigned long
+stdc_bit_floorul(unsigned long value)
+{
+   return value == 0 ? 0 : (typeof(value))__BIT(stdc_bit_widthul(value) - 1);
+}
+
+unsigned long long
+stdc_bit_floorull(unsigned long long value)
+{
+   return value == 0 ? 0 : (typeof(value))__BIT(stdc_bit_widthull(value) - 1);
+}

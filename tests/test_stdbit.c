@@ -120,6 +120,17 @@ test_bit_width()
   printf("bitwidth of %lX: %d size:%zX\n", c, stdc_bit_widthul(c), sizeof(c));
 }
 
+void
+test_generics()
+{
+  printf("Testing generics:\n");
+  unsigned char a = 1;
+  printf("leading zeros in %X: %d size:%zX\n", a, stdc_leading_zeros(a), sizeof(a));
+  unsigned char b = 7;
+  printf("leading zeros in %X: %d size:%zX\n", b, stdc_leading_zeros(b), sizeof(b));
+  unsigned char c = 0;
+  printf("leading zeros in %X: %d size:%zX\n", c, stdc_leading_zeros(c), sizeof(c));
+}
 int
 main()
 {
@@ -133,5 +144,6 @@ main()
   test_count_ones();
   test_single_bit();
   test_bit_width();
+  test_generics();
   return 0;
 }
