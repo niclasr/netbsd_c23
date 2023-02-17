@@ -5,7 +5,7 @@
  *
  * Developed at SunSoft, a Sun Microsystems, Inc. business.
  * Permission to use, copy, modify, and distribute this
- * software is freely granted, provided that this notice 
+ * software is freely granted, provided that this notice
  * is preserved.
  * ====================================================
  */
@@ -24,7 +24,7 @@
 /* local machine includes */
 #include <sys/types.h>
 #include <sys/endian.h>
-#include <machine/ieee.h>
+#include <nbmath_private.h>
 
 #define	GET_LDBL_MAN(h, l, v) do {	\
 	union ieee_ext_u uv;		\
@@ -33,41 +33,6 @@
 	h = uv.extu_frach;		\
 	l = uv.extu_fracl;		\
 } while (0)
-
-union ieee_expsign {
-   struct {
-#if _BYTE_ORDER == _BIG_ENDIAN
-       uint64_t sign:1;
-       uint64_t exp:EXT_EXPBITS;
-#else
-       uint64_t exp:EXT_EXPBITS;
-       uint64_t sign:1;
-#endif
-   } s;
-   uint64_t expsign :1+EXT_EXPBITS;
-};
-
-#define GET_LDBL_EXPSIGN(i, d)	\
-do {				\
-  union ieee_ext_u ge_u;	\
-  union ieee_expsign ge_es;     \
-  ge_u.extu_ld = (d);		\
-  ge_es.s.sign = ge_u.extu_sign;\
-  ge_es.s.exp = ge_u.extu_exp;  \
-  (i) = ge_es.expsign;          \
-} while (0)
-
-#define SET_LDBL_EXPSIGN(d, v)  \
-do {                            \
-  union ieee_ext_u se_u;        \
-  union ieee_expsign se_es;     \
-  se_u.extu_ld = (d);           \
-  se_es.expsign = (v);          \
-  se_u.extu_sign = se_es.s.sign;\
-  se_u.extu_exp = se_es.s.exp;  \
-  (d) = se_u.extu_ld;           \
-} while (0)
-
 
 #undef GET_HIGH_WORD
 #define	GET_HIGH_WORD(i, v)	GET_LDBL_EXPSIGN(i, v)
