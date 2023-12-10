@@ -3,9 +3,9 @@
 
 #include <sys/cdefs.h>
 #include <sys/endian.h>
+#include <sys/stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
-#include <stdint.h>
 
 #define __STDC_ENDIAN_LITTLE__	_LITTLE_ENDIAN
 #define __STDC_ENDIAN_BIG__	_BIG_ENDIAN
