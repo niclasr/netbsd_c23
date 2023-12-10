@@ -13,23 +13,23 @@
 
 __BEGIN_DECLS
 
-int stdc_leading_zerosuc(unsigned char value);
-int stdc_leading_zerosus(unsigned short value);
-int stdc_leading_zerosui(unsigned int value);
-int stdc_leading_zerosul(unsigned long value);
-int stdc_leading_zerosull(unsigned long long value);
+int stdc_leading_zerosuc(unsigned char);
+int stdc_leading_zerosus(unsigned short);
+int stdc_leading_zerosui(unsigned int);
+int stdc_leading_zerosul(unsigned long);
+int stdc_leading_zerosull(unsigned long long);
 
-int stdc_leading_onesuc(unsigned char value);
-int stdc_leading_onesus(unsigned short value);
-int stdc_leading_onesui(unsigned int value);
-int stdc_leading_onesul(unsigned long value);
-int stdc_leading_onesull(unsigned long long value);
+int stdc_leading_onesuc(unsigned char);
+int stdc_leading_onesus(unsigned short);
+int stdc_leading_onesui(unsigned int);
+int stdc_leading_onesul(unsigned long);
+int stdc_leading_onesull(unsigned long long);
 
-int stdc_trailing_zerosuc(unsigned char value);
-int stdc_trailing_zerosus(unsigned short value);
-int stdc_trailing_zerosui(unsigned int value);
-int stdc_trailing_zerosul(unsigned long value);
-int stdc_trailing_zerosull(unsigned long long value);
+int stdc_trailing_zerosuc(unsigned char);
+int stdc_trailing_zerosus(unsigned short);
+int stdc_trailing_zerosui(unsigned int);
+int stdc_trailing_zerosul(unsigned long);
+int stdc_trailing_zerosull(unsigned long long);
 
 int stdc_trailing_onesuc(unsigned char);
 int stdc_trailing_onesus(unsigned short);
@@ -49,23 +49,23 @@ int stdc_first_leading_oneui(unsigned int);
 int stdc_first_leading_oneul(unsigned long);
 int stdc_first_leading_oneull(unsigned long long);
 
-int stdc_count_zerosuc(unsigned char value);
-int stdc_count_zerosus(unsigned short value);
-int stdc_count_zerosui(unsigned int value);
-int stdc_count_zerosul(unsigned long value);
-int stdc_count_zerosull(unsigned long long value);
+int stdc_count_zerosuc(unsigned char);
+int stdc_count_zerosus(unsigned short);
+int stdc_count_zerosui(unsigned int);
+int stdc_count_zerosul(unsigned long);
+int stdc_count_zerosull(unsigned long long);
 
-int stdc_count_onesuc(unsigned char value);
-int stdc_count_onesus(unsigned short value);
-int stdc_count_onesui(unsigned int value);
-int stdc_count_onesul(unsigned long value);
-int stdc_count_onesull(unsigned long long value);
+int stdc_count_onesuc(unsigned char);
+int stdc_count_onesus(unsigned short);
+int stdc_count_onesui(unsigned int);
+int stdc_count_onesul(unsigned long);
+int stdc_count_onesull(unsigned long long);
 
-bool stdc_has_single_bituc(unsigned char value);
-bool stdc_has_single_bitus(unsigned short value);
-bool stdc_has_single_bitui(unsigned int value);
-bool stdc_has_single_bitul(unsigned long value);
-bool stdc_has_single_bitull(unsigned long long value);
+bool stdc_has_single_bituc(unsigned char);
+bool stdc_has_single_bitus(unsigned short);
+bool stdc_has_single_bitui(unsigned int);
+bool stdc_has_single_bitul(unsigned long);
+bool stdc_has_single_bitull(unsigned long long);
 
 int stdc_bit_widthuc(unsigned char);
 int stdc_bit_widthus(unsigned short);
