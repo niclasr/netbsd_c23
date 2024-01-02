@@ -24,3 +24,6 @@ target_compile_options(m23 PUBLIC -std=gnu11 -Wall -Wextra)
 c23_test(memalignment)
 c23_test(stdbit)
 c23_test(math)
+
+c23_atf_test(stdbit AtfTests)
+write_atf_file(AtfTests)
