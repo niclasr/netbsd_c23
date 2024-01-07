@@ -1,0 +1,107 @@
+.\"	$NetBSD: threads.3,v 1.2 2019/04/27 10:57:11 wiz Exp $
+.\"
+.\" Copyright (c) 2016 The NetBSD Foundation, Inc.
+.\" All rights reserved.
+.\"
+.\" This code is derived from software contributed to The NetBSD Foundation
+.\" by Kamil Rytarowski.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+.\" ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+.\" TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+.\" PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+.\" BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+.\" CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+.\" SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+.\" INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+.\" CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+.\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+.\" POSSIBILITY OF SUCH DAMAGE.
+.\"
+.Dd January 7, 2024
+.Dt STDBIT 3
+.Os
+.Sh NAME
+.Nm stdbit
+.Nd C23 standard bit functions
+.Sh LIBRARY
+.Lb libc
+.Sh SYNOPSIS
+.In stdbit.h
+.Sh DESCRIPTION
+The
+.In stdbit.h
+defines the following type and macros:
+.Bl -enum
+.It
+.Vt size_t
+- integer type described in
+.Xr stddef 3 ;
+.It
+.Vt uintN_t
+,
+.Vt intN_t
+,
+.Vt uint_leastN_t
+and
+.Vt int_leastN_t
+where N is 8, 16, 32 or 64
+- integer types described in
+.Xr stdint 3 ;
+.It
+.Dv __STDC_VERSION_STDBIT_H__
+- Define set the version of stdbit.h, currently 202311L;
+.It
+.Dv __STDC_ENDIAN_BIG__
+- Define set to a number repesenting big endian;
+.It
+.Dv __STDC_ENDIAN_LITTLE__
+- Define set to a number repesenting little endian;
+.It
+.Dv __STDC_ENDIAN_NATIVE__
+- Define set to __STDC_ENDIAN_LITTLE__ on little endian systems,
+__STDC_ENDIAN_BIG__ on big endian systems or something else if the system is
+neither big or little endian;
+.El
+.Pp
+.In stbbit.h
+declares the functions below:
+.Bl -column "stdc_first_trailing_zero"
+.It Sy "Function"                 Ta Sy "Summary"
+.It Xr stdc_bit_ceil 3            Ta 
+.It Xr stdc_bit_floor 3           Ta 
+.It Xr stdc_bit_width 3           Ta check number of bits needed to store value
+.It Xr stdc_count_ones 3          Ta count number of bits set
+.It Xr stdc_count_zeros 3         Ta count number of bits not set
+.It Xr stdc_first_leading_one 3   Ta
+.It Xr stdc_first_leading_zero 3  Ta
+.It Xr stdc_first_trailing_one 3  Ta
+.It Xr stdc_first_trailing_zero 3 Ta
+.It Xr stdc_has_single_bit 3      Ta check if only a single bit is set
+.It Xr stdc_leading_ones 3        Ta 
+.It Xr stdc_leading_zeros 3       Ta 
+.It Xr stdc_trailing_ones 3       Ta 
+.It Xr stdc_trailing_zeros 3      Ta 
+.El
+.Sh SEE ALSO
+.Xr bitops 3 ,
+.Xr ffs 3 ,
+.Xr ffs32 3 ,
+.Xr popcount 3 ,
+.Xr stddef 3 ,
+.Xr stdint 3 ,
+.Xr c 7
+.Sh STANDARDS
+The
+.In stdbit.h
+header file conforms to
+.St -isoC-2023 .
