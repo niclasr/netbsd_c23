@@ -79,6 +79,12 @@ unsigned int       stdc_bit_floorui(unsigned int);
 unsigned long      stdc_bit_floorul(unsigned long);
 unsigned long long stdc_bit_floorull(unsigned long long);
 
+unsigned char      stdc_bit_ceiluc(unsigned char);
+unsigned short     stdc_bit_ceilus(unsigned short);
+unsigned int       stdc_bit_ceilui(unsigned int);
+unsigned long      stdc_bit_ceilul(unsigned long);
+unsigned long long stdc_bit_ceilull(unsigned long long);
+
 __END_DECLS
 
 #define __STDBIT_GENERIC__(FSIM, X) _Generic((X),   \
@@ -102,5 +108,6 @@ __END_DECLS
 #define stdc_has_single_bit(X)      __STDBIT_GENERIC__(has_single_bit, X)
 #define stdc_bit_width(X)           __STDBIT_GENERIC__(bit_width, X)
 #define stdc_bit_floor(X)           __STDBIT_GENERIC__(bit_floor, X)
+#define stdc_bit_ceil(X)           __STDBIT_GENERIC__(bit_ceil, X)
 
 #endif

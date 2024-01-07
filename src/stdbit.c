@@ -438,3 +438,40 @@ stdc_bit_floorull(unsigned long long value)
 {
    return value == 0 ? 0 : (typeof(value))__BIT(stdc_bit_widthull(value) - 1);
 }
+
+
+
+
+
+
+
+
+unsigned char
+stdc_bit_ceiluc(unsigned char value)
+{
+   return (typeof(value))__BIT(stdc_bit_widthuc(value));
+}
+
+unsigned short
+stdc_bit_ceilus(unsigned short value)
+{
+   return (typeof(value))__BIT(stdc_bit_widthus(value));
+}
+
+unsigned int
+stdc_bit_ceilui(unsigned int value)
+{
+   return (typeof(value))__BIT(stdc_bit_widthui(value));
+}
+
+unsigned long
+stdc_bit_ceilul(unsigned long value)
+{
+   return (typeof(value))__BIT(stdc_bit_widthul(value));
+}
+
+unsigned long long
+stdc_bit_ceilull(unsigned long long value)
+{
+   return (typeof(value))__BIT(stdc_bit_widthull(value));
+}
