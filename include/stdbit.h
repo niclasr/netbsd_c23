@@ -1,5 +1,5 @@
-#ifndef _STDC_VERSION_STDBIT_H_
-#define _STDC_VERSION_STDBIT_H_ 202311L
+#ifndef __STDC_VERSION_STDBIT_H__
+#define __STDC_VERSION_STDBIT_H__ 202311L
 
 #include <sys/cdefs.h>
 #include <sys/endian.h>
