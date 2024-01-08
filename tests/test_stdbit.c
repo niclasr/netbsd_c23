@@ -73,6 +73,17 @@ test_first_leading_one()
 }
 
 void
+test_first_trailing_one()
+{
+  unsigned char a = 0x1F;
+  printf("first trailing one in %X: %u size:%zX\n", a, stdc_first_trailing_one_uc(a), sizeof(a));
+  unsigned char b = 0x00;
+  printf("first trailing one in %X: %u size:%zX\n", b, stdc_first_trailing_one_uc(b), sizeof(b));
+  unsigned char c = 0x04;
+  printf("first trailing one in %X: %u size:%zX\n", c, stdc_first_trailing_one_uc(c), sizeof(c));
+}
+
+void
 test_count_zeros()
 {
   unsigned short a = 1;
@@ -145,5 +156,6 @@ main()
   test_single_bit();
   test_bit_width();
   test_generics();
+  test_first_trailing_one();
   return 0;
 }

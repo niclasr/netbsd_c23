@@ -49,6 +49,18 @@ unsigned int stdc_first_leading_one_ui(unsigned int);
 unsigned int stdc_first_leading_one_ul(unsigned long);
 unsigned int stdc_first_leading_one_ull(unsigned long long);
 
+unsigned int stdc_first_trailing_zero_uc(unsigned char);
+unsigned int stdc_first_trailing_zero_us(unsigned short);
+unsigned int stdc_first_trailing_zero_ui(unsigned int);
+unsigned int stdc_first_trailing_zero_ul(unsigned long);
+unsigned int stdc_first_trailing_zero_ull(unsigned long long);
+
+unsigned int stdc_first_trailing_one_uc(unsigned char);
+unsigned int stdc_first_trailing_one_us(unsigned short);
+unsigned int stdc_first_trailing_one_ui(unsigned int);
+unsigned int stdc_first_trailing_one_ul(unsigned long);
+unsigned int stdc_first_trailing_one_ull(unsigned long long);
+
 unsigned int stdc_count_zeros_uc(unsigned char);
 unsigned int stdc_count_zeros_us(unsigned short);
 unsigned int stdc_count_zeros_ui(unsigned int);

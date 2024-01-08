@@ -268,6 +268,80 @@ stdc_first_leading_one_ull(unsigned long long value)
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
+/* stdc_first_trailing_zero */
+
+unsigned int
+stdc_first_trailing_zero_uc(unsigned char value)
+{
+    unsigned int pos = stdc_trailing_ones_uc(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+unsigned int
+stdc_first_trailing_zero_us(unsigned short value)
+{
+    unsigned int pos = stdc_trailing_ones_us(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+unsigned int
+stdc_first_trailing_zero_ui(unsigned int value)
+{
+    unsigned int pos = stdc_trailing_ones_ui(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+unsigned int
+stdc_first_trailing_zero_ul(unsigned long value)
+{
+    unsigned int pos = stdc_trailing_ones_ul(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+unsigned int
+stdc_first_trailing_zero_ull(unsigned long long value)
+{
+    unsigned int pos = stdc_trailing_ones_ull(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+/* first_trailing_one */
+
+unsigned int
+stdc_first_trailing_one_uc(unsigned char value)
+{
+    unsigned int pos = stdc_trailing_zeros_uc(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+unsigned int
+stdc_first_trailing_one_us(unsigned short value)
+{
+    unsigned int pos = stdc_trailing_zeros_us(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+unsigned int
+stdc_first_trailing_one_ui(unsigned int value)
+{
+    unsigned int pos = stdc_trailing_zeros_ui(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+unsigned int
+stdc_first_trailing_one_ul(unsigned long value)
+{
+    unsigned int pos = stdc_trailing_zeros_ul(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
+unsigned int
+stdc_first_trailing_one_ull(unsigned long long value)
+{
+    unsigned int pos = stdc_trailing_zeros_ull(value);
+    return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
+}
+
 /* stdc_count_zeros */
 
 unsigned int
