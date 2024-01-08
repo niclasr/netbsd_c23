@@ -66,6 +66,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     return nset;                          \
 
 
+/* stdc_leading_zeros */
 
 int
 stdc_leading_zeros_uc(unsigned char value)
@@ -97,8 +98,7 @@ stdc_leading_zeros_ull(unsigned long long value)
 LEADTRIAL_IMPL(nbits - 1, !=, >>=)
 }
 
-
-
+/* stdc_leading_ones */
 
 int
 stdc_leading_ones_uc(unsigned char value)
@@ -130,7 +130,7 @@ stdc_leading_ones_ull(unsigned long long value)
 LEADTRIAL_IMPL(nbits - 1, ==, >>=)
 }
 
-
+/* stdc_trailing_zeros */
 
 int
 stdc_trailing_zeros_uc(unsigned char value)
@@ -162,8 +162,7 @@ stdc_trailing_zeros_ull(unsigned long long value)
 LEADTRIAL_IMPL(0, !=, <<=)
 }
 
-
-
+/* stdc_trailing_ones */
 
 int
 stdc_trailing_ones_uc(unsigned char value)
@@ -195,8 +194,7 @@ stdc_trailing_ones_ull(unsigned long long value)
 LEADTRIAL_IMPL(0, ==, <<=)
 }
 
-
-
+/* stdc_first_leading_zero */
 
 int
 stdc_first_leading_zero_uc(unsigned char value)
@@ -233,9 +231,7 @@ stdc_first_leading_zero_ull(unsigned long long value)
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-
-
-
+/* stdc_first_leading_one */
 
 int
 stdc_first_leading_one_uc(unsigned char value)
@@ -272,11 +268,7 @@ stdc_first_leading_one_ull(unsigned long long value)
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-
-
-
-
-
+/* stdc_count_zeros */
 
 int
 stdc_count_zeros_uc(unsigned char value)
@@ -308,6 +300,8 @@ stdc_count_zeros_ull(unsigned long long value)
 COUNT_IMPL(==)
 }
 
+/* stdc_count_ones */
+
 int
 stdc_count_ones_uc(unsigned char value)
 {
@@ -337,6 +331,8 @@ stdc_count_ones_ull(unsigned long long value)
 {
 COUNT_IMPL(!=)
 }
+
+/* stdc_has_single_bit */
 
 bool
 stdc_has_single_bit_uc(unsigned char value)
@@ -368,10 +364,7 @@ stdc_has_single_bit_ull(unsigned long long value)
     return ((value & (value - 1)) == 0) && (value != 0);
 }
 
-
-
-
-
+/* stdc_bit_width */
 
 int
 stdc_bit_width_uc(unsigned char value)
@@ -403,11 +396,7 @@ stdc_bit_width_ull(unsigned long long value)
    return (sizeof(value) * CHAR_BIT) - stdc_leading_zeros_ull(value);
 }
 
-
-
-
-
-
+/* stdc_bit_floor */
 
 unsigned char
 stdc_bit_floor_uc(unsigned char value)
@@ -439,12 +428,7 @@ stdc_bit_floor_ull(unsigned long long value)
    return value == 0 ? 0 : (typeof(value))__BIT(stdc_bit_width_ull(value) - 1);
 }
 
-
-
-
-
-
-
+/* stdc_bit_ceil */
 
 unsigned char
 stdc_bit_ceil_uc(unsigned char value)
