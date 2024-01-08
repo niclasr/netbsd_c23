@@ -32,11 +32,11 @@
 .Dt STDC_BIT_FLOOR 3
 .Os
 .Sh NAME
-.Nm stdc_bit_flooruc ,
-.Nm stdc_bit_floorus ,
-.Nm stdc_bit_floorui ,
-.Nm stdc_bit_floorul ,
-.Nm stdc_bit_floorull ,
+.Nm stdc_bit_floor_uc ,
+.Nm stdc_bit_floor_us ,
+.Nm stdc_bit_floor_ui ,
+.Nm stdc_bit_floor_ul ,
+.Nm stdc_bit_floor_ull ,
 .Nm stdc_bit_floor
 .Nd bit floor functions
 .Sh LIBRARY
@@ -44,25 +44,25 @@
 .Sh SYNOPSIS
 .In stdbit.h
 .Ft unsigned char
-.Fn stdc_bit_flooruc "unsigned char x"
+.Fn stdc_bit_floor_uc "unsigned char x"
 .Ft unsigned short
-.Fn stdc_bit_floorus "unsigned short x"
+.Fn stdc_bit_floor_us "unsigned short x"
 .Ft unsigned int
-.Fn stdc_bit_floorui "unsigned int x"
+.Fn stdc_bit_floor_ui "unsigned int x"
 .Ft unsigned long
-.Fn stdc_bit_floorul "unsigned long x"
+.Fn stdc_bit_floor_ul "unsigned long x"
 .Ft unsigned long long
-.Fn stdc_bit_floorull "unsigned long long x"
+.Fn stdc_bit_floor_ull "unsigned long long x"
 .Ft generic_value_type
 .Fn stdc_bit_floor "generic_value_type x"
 .Sh DESCRIPTION
 The
-.Fn stdc_bit_flooruc ,
-.Fn stdc_bit_floorus ,
-.Fn stdc_bit_floorui ,
-.Fn stdc_bit_floorul ,
+.Fn stdc_bit_floor_uc ,
+.Fn stdc_bit_floor_us ,
+.Fn stdc_bit_floor_ui ,
+.Fn stdc_bit_floor_ul ,
 and
-.Fn stdc_bit_floorull
+.Fn stdc_bit_floor_ull
 functions compute the largest value with only a single bit set
 that is not larger than
 .Fa x .

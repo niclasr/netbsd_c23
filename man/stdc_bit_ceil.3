@@ -32,11 +32,11 @@
 .Dt STDC_BIT_CEIL 3
 .Os
 .Sh NAME
-.Nm stdc_bit_ceiluc ,
-.Nm stdc_bit_ceilus ,
-.Nm stdc_bit_ceilui ,
-.Nm stdc_bit_ceilul ,
-.Nm stdc_bit_ceilull ,
+.Nm stdc_bit_ceil_uc ,
+.Nm stdc_bit_ceil_us ,
+.Nm stdc_bit_ceil_ui ,
+.Nm stdc_bit_ceil_ul ,
+.Nm stdc_bit_ceil_ull ,
 .Nm stdc_bit_ceil
 .Nd bit ceiling functions
 .Sh LIBRARY
@@ -44,25 +44,25 @@
 .Sh SYNOPSIS
 .In stdbit.h
 .Ft unsigned char
-.Fn stdc_bit_ceiluc "unsigned char x"
+.Fn stdc_bit_ceil_uc "unsigned char x"
 .Ft unsigned short
-.Fn stdc_bit_ceilus "unsigned short x"
+.Fn stdc_bit_ceil_us "unsigned short x"
 .Ft unsigned int
-.Fn stdc_bit_ceilui "unsigned int x"
+.Fn stdc_bit_ceil_ui "unsigned int x"
 .Ft unsigned long
-.Fn stdc_bit_ceilul "unsigned long x"
+.Fn stdc_bit_ceil_ul "unsigned long x"
 .Ft unsigned long long
-.Fn stdc_bit_ceilull "unsigned long long x"
+.Fn stdc_bit_ceil_ull "unsigned long long x"
 .Ft generic_value_type
 .Fn stdc_bit_ceil "generic_value_type x"
 .Sh DESCRIPTION
 The
-.Fn stdc_bit_ceiluc ,
-.Fn stdc_bit_ceilus ,
-.Fn stdc_bit_ceilui ,
-.Fn stdc_bit_ceilul ,
+.Fn stdc_bit_ceil_uc ,
+.Fn stdc_bit_ceil_us ,
+.Fn stdc_bit_ceil_ui ,
+.Fn stdc_bit_ceil_ul ,
 and
-.Fn stdc_bit_ceilull
+.Fn stdc_bit_ceil_ull
 functions compute the smallest value with only a single bit set
 that is not less than
 .Fa x .
