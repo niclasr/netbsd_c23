@@ -14,7 +14,7 @@ ATF_TC_BODY(stdc_leading_zeros_uc, tc)
 {
   static const struct {
       unsigned char val;
-      int res;
+      unsigned int res;
   } table[] = {
     {0, CHAR_BIT},
     {1, CHAR_BIT - 1},

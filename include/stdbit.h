@@ -13,53 +13,53 @@
 
 __BEGIN_DECLS
 
-int stdc_leading_zeros_uc(unsigned char);
-int stdc_leading_zeros_us(unsigned short);
-int stdc_leading_zeros_ui(unsigned int);
-int stdc_leading_zeros_ul(unsigned long);
-int stdc_leading_zeros_ull(unsigned long long);
+unsigned int stdc_leading_zeros_uc(unsigned char);
+unsigned int stdc_leading_zeros_us(unsigned short);
+unsigned int stdc_leading_zeros_ui(unsigned int);
+unsigned int stdc_leading_zeros_ul(unsigned long);
+unsigned int stdc_leading_zeros_ull(unsigned long long);
 
-int stdc_leading_ones_uc(unsigned char);
-int stdc_leading_ones_us(unsigned short);
-int stdc_leading_ones_ui(unsigned int);
-int stdc_leading_ones_ul(unsigned long);
-int stdc_leading_ones_ull(unsigned long long);
+unsigned int stdc_leading_ones_uc(unsigned char);
+unsigned int stdc_leading_ones_us(unsigned short);
+unsigned int stdc_leading_ones_ui(unsigned int);
+unsigned int stdc_leading_ones_ul(unsigned long);
+unsigned int stdc_leading_ones_ull(unsigned long long);
 
-int stdc_trailing_zeros_uc(unsigned char);
-int stdc_trailing_zeros_us(unsigned short);
-int stdc_trailing_zeros_ui(unsigned int);
-int stdc_trailing_zeros_ul(unsigned long);
-int stdc_trailing_zeros_ull(unsigned long long);
+unsigned int stdc_trailing_zeros_uc(unsigned char);
+unsigned int stdc_trailing_zeros_us(unsigned short);
+unsigned int stdc_trailing_zeros_ui(unsigned int);
+unsigned int stdc_trailing_zeros_ul(unsigned long);
+unsigned int stdc_trailing_zeros_ull(unsigned long long);
 
-int stdc_trailing_ones_uc(unsigned char);
-int stdc_trailing_ones_us(unsigned short);
-int stdc_trailing_ones_ui(unsigned int);
-int stdc_trailing_ones_ul(unsigned long);
-int stdc_trailing_ones_ull(unsigned long long);
+unsigned int stdc_trailing_ones_uc(unsigned char);
+unsigned int stdc_trailing_ones_us(unsigned short);
+unsigned int stdc_trailing_ones_ui(unsigned int);
+unsigned int stdc_trailing_ones_ul(unsigned long);
+unsigned int stdc_trailing_ones_ull(unsigned long long);
 
-int stdc_first_leading_zero_uc(unsigned char);
-int stdc_first_leading_zero_us(unsigned short);
-int stdc_first_leading_zero_ui(unsigned int);
-int stdc_first_leading_zero_ul(unsigned long);
-int stdc_first_leading_zero_ull(unsigned long long);
+unsigned int stdc_first_leading_zero_uc(unsigned char);
+unsigned int stdc_first_leading_zero_us(unsigned short);
+unsigned int stdc_first_leading_zero_ui(unsigned int);
+unsigned int stdc_first_leading_zero_ul(unsigned long);
+unsigned int stdc_first_leading_zero_ull(unsigned long long);
 
-int stdc_first_leading_one_uc(unsigned char);
-int stdc_first_leading_one_us(unsigned short);
-int stdc_first_leading_one_ui(unsigned int);
-int stdc_first_leading_one_ul(unsigned long);
-int stdc_first_leading_one_ull(unsigned long long);
+unsigned int stdc_first_leading_one_uc(unsigned char);
+unsigned int stdc_first_leading_one_us(unsigned short);
+unsigned int stdc_first_leading_one_ui(unsigned int);
+unsigned int stdc_first_leading_one_ul(unsigned long);
+unsigned int stdc_first_leading_one_ull(unsigned long long);
 
-int stdc_count_zeros_uc(unsigned char);
-int stdc_count_zeros_us(unsigned short);
-int stdc_count_zeros_ui(unsigned int);
-int stdc_count_zeros_ul(unsigned long);
-int stdc_count_zeros_ull(unsigned long long);
+unsigned int stdc_count_zeros_uc(unsigned char);
+unsigned int stdc_count_zeros_us(unsigned short);
+unsigned int stdc_count_zeros_ui(unsigned int);
+unsigned int stdc_count_zeros_ul(unsigned long);
+unsigned int stdc_count_zeros_ull(unsigned long long);
 
-int stdc_count_ones_uc(unsigned char);
-int stdc_count_ones_us(unsigned short);
-int stdc_count_ones_ui(unsigned int);
-int stdc_count_ones_ul(unsigned long);
-int stdc_count_ones_ull(unsigned long long);
+unsigned int stdc_count_ones_uc(unsigned char);
+unsigned int stdc_count_ones_us(unsigned short);
+unsigned int stdc_count_ones_ui(unsigned int);
+unsigned int stdc_count_ones_ul(unsigned long);
+unsigned int stdc_count_ones_ull(unsigned long long);
 
 bool stdc_has_single_bit_uc(unsigned char);
 bool stdc_has_single_bit_us(unsigned short);
@@ -67,11 +67,11 @@ bool stdc_has_single_bit_ui(unsigned int);
 bool stdc_has_single_bit_ul(unsigned long);
 bool stdc_has_single_bit_ull(unsigned long long);
 
-int stdc_bit_width_uc(unsigned char);
-int stdc_bit_width_us(unsigned short);
-int stdc_bit_width_ui(unsigned int);
-int stdc_bit_width_ul(unsigned long);
-int stdc_bit_width_ull(unsigned long long);
+unsigned int stdc_bit_width_uc(unsigned char);
+unsigned int stdc_bit_width_us(unsigned short);
+unsigned int stdc_bit_width_ui(unsigned int);
+unsigned int stdc_bit_width_ul(unsigned long);
+unsigned int stdc_bit_width_ull(unsigned long long);
 
 unsigned char      stdc_bit_floor_uc(unsigned char);
 unsigned short     stdc_bit_floor_us(unsigned short);

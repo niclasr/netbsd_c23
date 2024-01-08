@@ -68,31 +68,31 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 /* stdc_leading_zeros */
 
-int
+unsigned int
 stdc_leading_zeros_uc(unsigned char value)
 {
 LEADTRIAL_IMPL(nbits - 1, !=, >>=)
 }
 
-int
+unsigned int
 stdc_leading_zeros_us(unsigned short value)
 {
 LEADTRIAL_IMPL(nbits - 1, !=, >>=)
 }
 
-int
+unsigned int
 stdc_leading_zeros_ui(unsigned int value)
 {
 LEADTRIAL_IMPL(nbits - 1, !=, >>=)
 }
 
-int
+unsigned int
 stdc_leading_zeros_ul(unsigned long value)
 {
 LEADTRIAL_IMPL(nbits - 1, !=, >>=)
 }
 
-int
+unsigned int
 stdc_leading_zeros_ull(unsigned long long value)
 {
 LEADTRIAL_IMPL(nbits - 1, !=, >>=)
@@ -100,31 +100,31 @@ LEADTRIAL_IMPL(nbits - 1, !=, >>=)
 
 /* stdc_leading_ones */
 
-int
+unsigned int
 stdc_leading_ones_uc(unsigned char value)
 {
 LEADTRIAL_IMPL(nbits - 1, ==, >>=)
 }
 
-int
+unsigned int
 stdc_leading_ones_us(unsigned short value)
 {
 LEADTRIAL_IMPL(nbits - 1, ==, >>=)
 }
 
-int
+unsigned int
 stdc_leading_ones_ui(unsigned int value)
 {
 LEADTRIAL_IMPL(nbits - 1, ==, >>=)
 }
 
-int
+unsigned int
 stdc_leading_ones_ul(unsigned long value)
 {
 LEADTRIAL_IMPL(nbits - 1, ==, >>=)
 }
 
-int
+unsigned int
 stdc_leading_ones_ull(unsigned long long value)
 {
 LEADTRIAL_IMPL(nbits - 1, ==, >>=)
@@ -132,31 +132,31 @@ LEADTRIAL_IMPL(nbits - 1, ==, >>=)
 
 /* stdc_trailing_zeros */
 
-int
+unsigned int
 stdc_trailing_zeros_uc(unsigned char value)
 {
 LEADTRIAL_IMPL(0, !=, <<=)
 }
 
-int
+unsigned int
 stdc_trailing_zeros_us(unsigned short value)
 {
 LEADTRIAL_IMPL(0, !=, <<=)
 }
 
-int
+unsigned int
 stdc_trailing_zeros_ui(unsigned int value)
 {
 LEADTRIAL_IMPL(0, !=, <<=)
 }
 
-int
+unsigned int
 stdc_trailing_zeros_ul(unsigned long value)
 {
 LEADTRIAL_IMPL(0, !=, <<=)
 }
 
-int
+unsigned int
 stdc_trailing_zeros_ull(unsigned long long value)
 {
 LEADTRIAL_IMPL(0, !=, <<=)
@@ -164,31 +164,31 @@ LEADTRIAL_IMPL(0, !=, <<=)
 
 /* stdc_trailing_ones */
 
-int
+unsigned int
 stdc_trailing_ones_uc(unsigned char value)
 {
 LEADTRIAL_IMPL(0, ==, <<=)
 }
 
-int
+unsigned int
 stdc_trailing_ones_us(unsigned short value)
 {
 LEADTRIAL_IMPL(0, ==, <<=)
 }
 
-int
+unsigned int
 stdc_trailing_ones_ui(unsigned int value)
 {
 LEADTRIAL_IMPL(0, ==, <<=)
 }
 
-int
+unsigned int
 stdc_trailing_ones_ul(unsigned long value)
 {
 LEADTRIAL_IMPL(0, ==, <<=)
 }
 
-int
+unsigned int
 stdc_trailing_ones_ull(unsigned long long value)
 {
 LEADTRIAL_IMPL(0, ==, <<=)
@@ -196,105 +196,105 @@ LEADTRIAL_IMPL(0, ==, <<=)
 
 /* stdc_first_leading_zero */
 
-int
+unsigned int
 stdc_first_leading_zero_uc(unsigned char value)
 {
-    int pos =  stdc_leading_ones_uc(value);
+    unsigned int pos =  stdc_leading_ones_uc(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-int
+unsigned int
 stdc_first_leading_zero_us(unsigned short value)
 {
-    int pos =  stdc_leading_ones_us(value);
+    unsigned int pos =  stdc_leading_ones_us(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-int
+unsigned int
 stdc_first_leading_zero_ui(unsigned int value)
 {
-    int pos =  stdc_leading_ones_ui(value);
+    unsigned int pos =  stdc_leading_ones_ui(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-int
+unsigned int
 stdc_first_leading_zero_ul(unsigned long value)
 {
-    int pos =  stdc_leading_ones_ul(value);
+    unsigned int pos =  stdc_leading_ones_ul(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-int
+unsigned int
 stdc_first_leading_zero_ull(unsigned long long value)
 {
-    int pos =  stdc_leading_ones_ull(value);
+    unsigned int pos =  stdc_leading_ones_ull(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
 /* stdc_first_leading_one */
 
-int
+unsigned int
 stdc_first_leading_one_uc(unsigned char value)
 {
-    int pos =  stdc_leading_zeros_uc(value);
+    unsigned int pos =  stdc_leading_zeros_uc(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-int
+unsigned int
 stdc_first_leading_one_us(unsigned short value)
 {
-    int pos =  stdc_leading_zeros_us(value);
+    unsigned int pos =  stdc_leading_zeros_us(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-int
+unsigned int
 stdc_first_leading_one_ui(unsigned int value)
 {
-    int pos =  stdc_leading_zeros_ui(value);
+    unsigned int pos =  stdc_leading_zeros_ui(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-int
+unsigned int
 stdc_first_leading_one_ul(unsigned long value)
 {
-    int pos =  stdc_leading_zeros_ul(value);
+    unsigned int pos =  stdc_leading_zeros_ul(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
-int
+unsigned int
 stdc_first_leading_one_ull(unsigned long long value)
 {
-    int pos =  stdc_leading_zeros_ull(value);
+    unsigned int pos =  stdc_leading_zeros_ull(value);
     return (pos != (sizeof(value) * CHAR_BIT)) * (pos + 1);
 }
 
 /* stdc_count_zeros */
 
-int
+unsigned int
 stdc_count_zeros_uc(unsigned char value)
 {
 COUNT_IMPL(==)
 }
 
-int
+unsigned int
 stdc_count_zeros_us(unsigned short value)
 {
 COUNT_IMPL(==)
 }
-int
+unsigned int
 
 stdc_count_zeros_ui(unsigned int value)
 {
 COUNT_IMPL(==)
 }
 
-int
+unsigned int
 stdc_count_zeros_ul(unsigned long value)
 {
 COUNT_IMPL(==)
 }
 
-int
+unsigned int
 stdc_count_zeros_ull(unsigned long long value)
 {
 COUNT_IMPL(==)
@@ -302,31 +302,31 @@ COUNT_IMPL(==)
 
 /* stdc_count_ones */
 
-int
+unsigned int
 stdc_count_ones_uc(unsigned char value)
 {
 COUNT_IMPL(!=)
 }
 
-int
+unsigned int
 stdc_count_ones_us(unsigned short value)
 {
 COUNT_IMPL(!=)
 }
 
-int
+unsigned int
 stdc_count_ones_ui(unsigned int value)
 {
 COUNT_IMPL(!=)
 }
 
-int
+unsigned int
 stdc_count_ones_ul(unsigned long value)
 {
 COUNT_IMPL(!=)
 }
 
-int
+unsigned int
 stdc_count_ones_ull(unsigned long long value)
 {
 COUNT_IMPL(!=)
@@ -366,31 +366,31 @@ stdc_has_single_bit_ull(unsigned long long value)
 
 /* stdc_bit_width */
 
-int
+unsigned int
 stdc_bit_width_uc(unsigned char value)
 {
    return (sizeof(value) * CHAR_BIT) - stdc_leading_zeros_uc(value);
 }
 
-int
+unsigned int
 stdc_bit_width_us(unsigned short value)
 {
    return (sizeof(value) * CHAR_BIT) - stdc_leading_zeros_us(value);
 }
 
-int
+unsigned int
 stdc_bit_width_ui(unsigned int value)
 {
    return (sizeof(value) * CHAR_BIT) - stdc_leading_zeros_ui(value);
 }
 
-int
+unsigned int
 stdc_bit_width_ul(unsigned long value)
 {
    return (sizeof(value) * CHAR_BIT) - stdc_leading_zeros_ul(value);
 }
 
-int
+unsigned int
 stdc_bit_width_ull(unsigned long long value)
 {
    return (sizeof(value) * CHAR_BIT) - stdc_leading_zeros_ull(value);
