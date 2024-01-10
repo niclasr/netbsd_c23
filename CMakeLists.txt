@@ -6,7 +6,21 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 include(Macros)
 
 add_library(c23
-            src/stdbit.c
+            src/stdbit/stdc_bit_ceil.c
+            src/stdbit/stdc_bit_floor.c
+            src/stdbit/stdc_bit_width.c
+            src/stdbit/stdc_count_ones.c
+            src/stdbit/stdc_count_zeros.c
+            src/stdbit/stdc_first_leading_one.c
+            src/stdbit/stdc_first_leading_zero.c
+            src/stdbit/stdc_first_trailing_one.c
+            src/stdbit/stdc_first_trailing_zero.c
+            src/stdbit/stdc_has_single_bit.c
+            src/stdbit/stdc_leading_ones.c
+            src/stdbit/stdc_leading_zeros.c
+            src/stdbit/stdc_trailing_ones.c
+            src/stdbit/stdc_trailing_zeros.c
+
             src/stddef.c
             src/stdlib.c)
 target_include_directories(c23 PUBLIC
