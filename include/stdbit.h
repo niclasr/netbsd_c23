@@ -1,11 +1,20 @@
-#ifndef __STDC_VERSION_STDBIT_H__
-#define __STDC_VERSION_STDBIT_H__ 202311L
+#ifndef _STDBIT_H_
+#define _STDBIT_H_
 
 #include <sys/cdefs.h>
 #include <sys/endian.h>
 #include <sys/stdint.h>
+
+#include <machine/ansi.h>
+
 #include <stdbool.h>
-#include <stddef.h>
+
+#ifdef  _BSD_SIZE_T_
+typedef _BSD_SIZE_T_ size_t;
+#undef  _BSD_SIZE_T_
+#endif
+
+#define __STDC_VERSION_STDBIT_H__ 202311L
 
 #define __STDC_ENDIAN_LITTLE__	_LITTLE_ENDIAN
 #define __STDC_ENDIAN_BIG__	_BIG_ENDIAN
