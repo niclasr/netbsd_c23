@@ -35,17 +35,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <sys/cdefs.h>
 
 void
-free_sized(void *ptr, size_t size)
+free_sized(void *ptr, size_t size __unused)
 {
-  (void)size; /* unused since jemalloc does not provide the size */
+  /* size unused since jemalloc does not provide the size */
   free(ptr);
 }
 
 void
-free_aligned_sized(void *ptr, size_t alignment, size_t size)
+free_aligned_sized(void *ptr, size_t alignment __unused, size_t size __unused)
 {
-  (void)alignment; /* unused since jemalloc does not provide the alignment */
-  (void)size;      /* unused since jemalloc does not provide the size */
+  /* alignment unused since jemalloc does not provide the alignment */
+  /* size unused since jemalloc does not provide the size */
   free(ptr);
 }
 
