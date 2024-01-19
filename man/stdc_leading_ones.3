@@ -1,0 +1,84 @@
+.\" Copyright (c) 1991 The Regents of the University of California.
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. Neither the name of the University nor the names of its contributors
+.\"    may be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.\"     from: @(#)cos.3	5.1 (Berkeley) 5/2/91
+.\"	$NetBSD: cos.3,v 1.16.2.1 2019/09/05 08:19:40 martin Exp $
+.\"
+.Dd January 15, 2024
+.Dt STDC_LEADING_ONES 3
+.Os
+.Sh NAME
+.Nm stdc_leading_ones_uc ,
+.Nm stdc_leading_ones_us ,
+.Nm stdc_leading_ones_ui ,
+.Nm stdc_leading_ones_ul ,
+.Nm stdc_leading_ones_ull ,
+.Nm stdc_leading_ones
+.Nd count leading ones in an unsigned integer
+.Sh LIBRARY
+.Lb libc
+.Sh SYNOPSIS
+.In stdbit.h
+.Ft unsigned int
+.Fn stdc_leading_ones_uc "unsigned char x"
+.Ft unsigned int
+.Fn stdc_leading_ones_us "unsigned short x"
+.Ft unsigned int
+.Fn stdc_leading_ones_ui "unsigned int x"
+.Ft unsigned int
+.Fn stdc_leading_ones_ul "unsigned long x"
+.Ft unsigned int
+.Fn stdc_leading_ones_ull "unsigned long long x"
+.Ft generic_value_type
+.Fn stdc_leading_ones "generic_value_type x"
+.Sh DESCRIPTION
+The
+.Fn stdc_leading_ones_uc ,
+.Fn stdc_leading_ones_us ,
+.Fn stdc_leading_ones_ui ,
+.Fn stdc_leading_ones_ul ,
+and
+.Fn stdc_leading_ones_ull
+functions counts the first consecutive set bits in
+.Fa x
+going from the most significant bit to the least
+significant bit.
+.Pp
+The
+.Fn stdc_leading_ones
+function is a type-generic macro that expands
+to one of the functions mentioned depending on the argument type.
+.Fn
+.Sh RETURN VALUES
+The functions return the number of the first consecutive set most
+significant bits in
+.Fa x .
+.Sh SEE ALSO
+.Xr stdbit 3
+.Sh STANDARDS
+The stdc_leading_ones functions conforms to
+.St -isoC-2023 .
